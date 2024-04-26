@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing:border-box;
 }
 
 body {
@@ -10,16 +10,69 @@ body {
 }
 
 .container {
-    display: flex;
+    /*display: inline-flex;*/ /*se ajusta al ancho de los items*/
+    display: flex; /*se ajusta al espacio disponible, y es el más común*/
+
+    /*flex-direction: row;*//*valor por default- izquierda a derecha*/
+   /* flex-direction: row-reverse*/;/*invierte la posición del contenedor-derecha a izquierda*/
+   /* flex-direction: column;*//*cambia la dirección a una columna-abajo hacia arriba*/
+    /*flex-direction: column-reverse;*//*dirección en columna pero se invierte la posición-arriba hacia abajo*/
+    flex-direction: row-reverse;
+
+    /*justify-content: start;*//*alinea a la izquierda*/
+    /*justify-content: end;*//*alinea a la derecha*/
+    /*justify-content: center;*//*alinea al centro*/
+    /*justify-content: space-around;*//*espacio alrededor*/
+    /*justify-content: space-between;//*espacio entre cada elemento*/ 
+    /*justify-content: space-evenly;*//*espacio identico alrededor del elemento*/
+    justify-content: center;
     background-color: rgb(18, 107, 149);
+
+
+
+    height: 500px;
+
+    /*align-items: flex-start;*//*alinea hacia arriba*/
+    /*align-items: flex-end;*//*alinea hacia abajo*/
+    /*align-items: center;*//*alinea al centro*/
+    /*align-items: stretch;*//*creece en altura los elementos en el espacio disponible, los items no tienen que tener alto defenido*/
+    /*align-items:baseline ;*//*alinea los items en funcion de la tliena base del texto que contiene.*/
+    align-items: center;
+
 }
 
+
 .item {
-    background-color: rgb(11, 46, 90);
+    background-color: rgb(242, 57, 85);
     width: 100px;
     height: 100px;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     padding-top: 32px;
+    border:1px solid black;
+
 }
+
+/*vamos a usar algo que se llama seudoclases para seleccionar los item individualmente*/
+
+/*.item:nth-child(3){
+    background-color: rgb(140, 140, 235);
+    font-size: 54px;
+    padding-top: 50px;
+}
+.item:nth-child(2){
+    background-color: rgb(111, 111, 236);
+    font-size: 87px;
+    padding-top: 67px;
+}
+.item:nth-child(4){
+    background-color: rgb(94, 94, 214);
+    font-size: 65px;
+    padding-top: 98px;
+}
+.item:nth-child(1){
+    background-color: #9696ff;
+    font-size: 34px;
+    padding-top: 45px;
+}*/
