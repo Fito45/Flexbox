@@ -11,32 +11,52 @@ body {
 
 .container {
     background-color: rgb(187, 127, 255);
-    flex-direction: row;
     display: flex;
 }
 
 /*propiedades de flexblox para los items
 
-*flex-basics -> Tamaño del main-sizes del elementos, es como un "width" ancho base del elemento
+flex grow -> esta propiedad ajusta el factor de crecimiento de los elementos en función del espacio disponible
 
-Cuando Flex-direction: row | row reverse -> flex basics = ancho
+el valor por default es "Auto".
 
-cuando Flex-direction: colum | colum reverse -> flex basics = alto
+esta propiedad recibe valores numericos: 1,2,3,4...
 
-flex-basics es relativo al espacio del cotenedor, si no hay espacio sufiencie, los elementos no creeceran más alla.
+el numoero que coloquemos es el factor de crecimiento.
 
-si tengo flex-basic 
+va a hacer que todos los items crecescan con el mismo factor 
+
  
 */
 
 .item {
-    flex-basis: 400px;
+    flex-grow: 1;
     background-color: rgb(242, 57, 85);
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     border:1px solid black;
 
+}
+
+.pollo{
+    flex-grow: 3;
+    background-color: darkslateblue;
+}
+
+.dinosaurio{
+    flex-grow: 5;
+    background-color: darkslategrey;
+}
+
+.ponmi{
+    flex-grow: 8;
+    background-color: aqua;
+}
+
+.pe{
+    flex-grow: 1;
+    background-color: darkcyan;
 }
 
 /*vamos a usar algo que se llama seudoclases para seleccionar los item individualmente*/
