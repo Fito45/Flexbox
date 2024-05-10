@@ -17,28 +17,42 @@ body {
    /* flex-direction: row-reverse*/;/*invierte la posición del contenedor-derecha a izquierda*/
    /* flex-direction: column;*//*cambia la dirección a una columna-abajo hacia arriba*/
     /*flex-direction: column-reverse;*//*dirección en columna pero se invierte la posición-arriba hacia abajo*/
-    flex-direction: row-reverse;
+    /*flex-direction: row-reverse;*/
 
     /*justify-content: start;*//*alinea a la izquierda*/
     /*justify-content: end;*//*alinea a la derecha*/
     /*justify-content: center;*//*alinea al centro*/
     /*justify-content: space-around;*//*espacio alrededor*/
-    /*justify-content: space-between;//*espacio entre cada elemento*/ 
+    justify-content: space-between;/*espacio entre cada elemento*/ 
     /*justify-content: space-evenly;*//*espacio identico alrededor del elemento*/
-    justify-content: center;
+   /* justify-content: center;*/
+
     background-color: rgb(18, 107, 149);
 
 
-
-    height: 500px;
-
-    /*align-items: flex-start;*//*alinea hacia arriba*/
+    align-items: flex-start;/*alinea hacia arriba*/
     /*align-items: flex-end;*//*alinea hacia abajo*/
     /*align-items: center;*//*alinea al centro*/
     /*align-items: stretch;*//*creece en altura los elementos en el espacio disponible, los items no tienen que tener alto defenido*/
     /*align-items:baseline ;*//*alinea los items en funcion de la tliena base del texto que contiene.*/
+
     align-items: center;
 
+    height: 500px;
+    width: 350px;
+    display: flex;
+
+    /*flex-wrap: nowrap;*//*valor por default, hace que los item se ajusten al ancho del contenedor*/
+    flex-wrap: wrap;/*esto permite tener multiples lineas si los items no encajan en el contenedor dara un salto de linea*/
+
+    /*align-content: normal;*//*valor por default*/
+    /*align-content:flex-start;*//*ajusta las lineas al inicio del eje transversal*/
+   /*align-content: flex-end;*//*ajusta las lineas al final del eje transversal*/
+    /*align-content: center;*//*ajusta las lineas al centro del eje transversal*/
+    /*align-content: space-around;*//*distribuye el espacio alrededor de cada linea*/
+    align-content: space-between;/*distribuye el espacio proporcionalmente entre cada linea. si considerar el contenedor*/
+    /*align-content: space-evenly;*//*distribuye el epacio proporcionalmente entre las lineas y el contenedor*/
+    /*align-content: stretch;*//*estiran el alto de los items sobre el eje transversal. los items no deben tener un alto definido*/
 }
 
 
