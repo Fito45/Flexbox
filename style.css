@@ -9,36 +9,39 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*
-Gap -> espacio entre los elementos.
-
-recibe valores en números con unidades reñlativas o absolutas .
-
-esta propiedad se para al contenedor
-*/
 
 .container {
-    width: 500px;
+    height: 500px;
+    background-color: rgb(208, 168, 255);
     display: flex;
-    flex-wrap: wrap;
-    background-color: rgb(187, 127, 255);
-    /*gap: 24px;*/
-    /*gap: 4rem;*/
-    column-gap: 16px;/*elementos divididos en columnas*/
-    row-gap: 32px;/*espacio de los elementos horizontal*/
-    gap: 4px 32px;
-    display: flex;
+    align-items:center;
+    justify-content: space-between;
 }
 
 .item {
     width:100px ;
     height: 100px;
-
     background-color: rgb(242, 57, 85);
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    border:1px solid black;
+    border:1px solid black; 
 
 }
+/*
 
+aling-self-> se pasa a unos varios elementos en particular.
+
+Va a Aliniear en el eje transversa a ese a ese elemento unicamente. y sobre escribe la
+propiedad de aling-items  y su valor si se ha declarado en el contenedor
+
+recibe los mismo valores que los items que aling-items:
+
+
+*/
+
+.solito{
+align-self: flex-end;
+height: auto;
+
+}
